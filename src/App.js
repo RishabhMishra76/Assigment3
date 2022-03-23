@@ -1,24 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import AllSafes from './Components/Safes/AllSafes/AllSafes'
+import VaultAppRoles from './Components/VaultAppRoles/VaultAppRoles';
+import ServiceAccounts from './Components/ServiceAccounts/ServiceAccounts';
+import IAMServiceAccounts from './Components/IAMServiceAccounts/IAMServiceAccounts';
+import AzureActiveDirectory from './Components/AzureActiveDirectory/AzureActiveDirectory';
+import logo from './assets/logo.svg'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className='wrapper'>
+          <nav className="navbar">
+          <img src={logo} className='logo' alt='logo'/>
+            <ul className="navbar-nav">
+              <NavLink end className={({ isActive }) =>"nav-link " + (isActive ? "selected" : "")} to={'/'}>Safes</NavLink>
+              <NavLink className={({ isActive }) =>"nav-link " + (isActive ? "selected" : "")} to={'/VaultAppRoles'} >VaultAppRoles</NavLink>
+              <NavLink className={({ isActive }) =>"nav-link " + (isActive ? "selected" : "")} to={'/ServiceAccounts'} >ServiceAccounts</NavLink>
+              <NavLink className={({ isActive }) =>"nav-link " + (isActive ? "selected" : "")} to={'/IAMServiceAccounts'} >IAMServiceAccounts</NavLink>
+              <NavLink className={({ isActive }) =>"nav-link " + (isActive ? "selected" : "")} to={'/AzureActiveDirectory'} >AzureActiveDirectory</NavLink>
+            </ul>
+          </nav>
+        <div className='container'>
+          <Routes>
+              <Route path='/' element={<AllSafes/>}/>
+              <Route path='/VaultAppRoles' element={<VaultAppRoles/>} />
+              <Route path='/ServiceAccounts' element={<ServiceAccounts/>} />
+              <Route path='/IAMServiceAccounts' element={<IAMServiceAccounts/>}/>
+              <Route path='/AzureActiveDirectory' element={<AzureActiveDirectory/>}/>
+          </Routes>
+        </div>
+        </div>
+      </Router>
   );
 }
 

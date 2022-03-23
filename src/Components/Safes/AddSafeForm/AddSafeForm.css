@@ -1,0 +1,276 @@
+.empty-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 0.75rem 0.75rem;
+  padding-right: 0;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1.5px solid gray;
+  opacity: 0.1;
+}
+
+.gray {
+  color: gray;
+  font-weight: normal;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 1.8rem;
+  width: 14rem;
+  background-color: #20232e;
+  margin-right: 0.5rem;
+}
+
+.search-container > img {
+  width: 1.5625rem;
+  height: 1.5625rem;
+  margin-left: 0.5rem;
+}
+
+.search-container > input {
+  border: none;
+  color: white;
+  background-color: #20232e;
+}
+
+.search-container > input:focus {
+  outline: none;
+  color: white;
+  background-color: #20232e;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.safe-list {
+  max-height: 19rem;
+  overflow-y: auto;
+}
+
+.empty-list {
+  position: absolute;
+  margin-left: 6.5rem;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.empty-list > img {
+  height: 12.25rem;
+  width: 10.5rem;
+}
+
+.empty-list > p {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+.Addbutton-empty {
+  height: 4rem;
+  width: 4rem;
+  margin-top: 1rem;
+}
+
+.Addbutton {
+  background-color: transparent;
+  height: 4rem;
+  width: 4rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.form {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 50vw;
+  height: 100vh;
+  z-index: 2;
+  background-color: #2a2e3e;
+  transform: translate(-50%, -50%);
+}
+
+.enter-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 6rem;
+}
+
+.safe-header {
+  margin-right: auto;
+  font-weight: 500;
+}
+
+.together {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.together > img {
+  height: 3rem;
+  width: 4rem;
+}
+
+.together > p {
+  line-height: 1rem;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+form > input {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30rem;
+  height: 3rem;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+form > select {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30rem;
+  height: 3rem;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+form > label {
+  margin-right: auto;
+}
+
+.create-button {
+  margin-top: 1rem;
+  background-color: #e20074;
+}
+
+.create-button-disabled {
+  margin-top: 1rem;
+  background-color: #151820;
+}
+
+.description {
+  margin-bottom: 0;
+}
+
+.description-value {
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.selected-safe {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  gap: 1rem;
+  padding-left: 2rem;
+  align-items: center;
+  background-image: linear-gradient(to right, #72134b, #1d212c);
+}
+
+.unselected-safe {
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.unselected-safe:hover {
+  background-image: linear-gradient(to right, #72134b, #1d212c);
+}
+
+.button-together {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-left: auto;
+  gap: 2rem;
+}
+
+.button-together > * {
+  margin-top: 0.75rem;
+  width: 5rem;
+  height: 2rem;
+  font-weight: 500;
+}
+
+.cancel-button {
+  background-color: white;
+  color: #e20074;
+}
+
+.icons {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 2rem;
+  opacity: 0.5;
+}
+
+.icons > button {
+  height: 2rem;
+  width: 2rem;
+}
+
+.icons > button:hover {
+  border-radius: 100%;
+  background-color: #2a2e3e;
+}
+
+.time-diff {
+  font-size: 0.8rem;
+  font-weight: 100;
+  opacity: 0.5;
+}
