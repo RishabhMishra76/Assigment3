@@ -1,0 +1,1 @@
+console.log("This is coming from the 2nd JS file");
